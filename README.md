@@ -5,10 +5,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby's default starter
+  Gatsby's default TypeScript starter
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+Kick off your project with this default TypeScript boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
 _Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
 
@@ -20,7 +20,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     ```shell
     # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
+    gatsby new my-default-typescript-starter https://github.com/camliu89/gatsby-typescript-starter
     ```
 
 1.  **Start developing.**
@@ -28,7 +28,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-default-starter/
+    cd my-default-typescript-starter/
     gatsby develop
     ```
 
@@ -38,7 +38,11 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `my-default-typescript-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
+
+1. **Optional: Manual changes**
+
+    The package manager this project uses is `yarn`. If you prefer to use `npm`, delete `yarn.lock` and in `package.json` change `"start": "yarn develop"` to `"start": "npm run develop"`. This site is configured also with **ESLint**.
 
 ## 🧐 What's inside?
 
@@ -49,13 +53,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── src
     ├── .gitignore
     ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
+    ├── .eslintrc.js
+    ├── gatsby-browser.tsx
+    ├── gatsby-config.tsx
+    ├── gatsby-node.tsx
+    ├── gatsby-ssr.tsx
     ├── LICENSE
-    ├── package-lock.json
     ├── package.json
+    ├── tsconfig.json
+    ├── yarn.lock
     └── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
@@ -66,21 +72,25 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+5.  **`.eslintrc.js`**: This is a configuration file for [ESLint](https://eslint.org/). ESLint is an code analyzer to help identify problems in the JavaScript patern code.
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+6.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+7.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+9.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
 
 11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+12. **`tsconfig.json`** This is the TypeScript configuration file.
+
+13. **`yarn.lock`** This is an automated generated file that stores the version of the npm packages to be consistent across machines.
+
+14. **`README.md`**: A text file containing useful reference information about your project.
 
 ## 🎓 Learning Gatsby
 
@@ -92,8 +102,8 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 ## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/camliu89/gatsby-typescript-starter)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/gatsbyjs/gatsby-starter-default)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/camliu89/gatsby-typescript-starter)
 
 <!-- AUTO-GENERATED-CONTENT:END -->
