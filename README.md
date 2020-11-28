@@ -40,10 +40,6 @@ _Have another more specific idea? You may want to check out our vibrant collecti
 
     Open the `my-default-typescript-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
 
-1. **Optional: Manual changes**
-
-    The package manager this project uses is `yarn`. If you prefer to use `npm`, delete `yarn.lock` and in `package.json` change `"start": "yarn develop"` to `"start": "npm run develop"`. This site is configured also with **ESLint**.
-
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
@@ -61,7 +57,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── LICENSE
     ├── package.json
     ├── tsconfig.json
-    ├── yarn.lock
     └── README.md
 
 1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
@@ -88,9 +83,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 12. **`tsconfig.json`** This is the TypeScript configuration file.
 
-13. **`yarn.lock`** This is an automated generated file that stores the version of the npm packages to be consistent across machines.
-
-14. **`README.md`**: A text file containing useful reference information about your project.
+13. **`README.md`**: A text file containing useful reference information about your project.
 
 ## 🎓 Learning Gatsby
 
